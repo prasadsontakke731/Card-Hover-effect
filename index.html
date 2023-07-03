@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Hover Effect</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #7f9ead;
+      }
+      .card {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        padding: 30px 50px;
+        background: #fff;
+        cursor: pointer;
+        animation: background 3s linear infinite;
+      }
+      @keyframes background {
+        0% {
+          background-color: red;
+        }
+        20% {
+          background-color: yellow;
+        }
+        40% {
+          background-color: green;
+        }
+        60% {
+          background-color: blue;
+        }
+        80% {
+          background-color: pink;
+        }
+        100% {
+          background-color: orange;
+        }
+      }
+      .card:hover {
+        height: 400px;
+        color: white;
+        font-style: italic;
+      }
+      .imgbox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-120px);
+        border-radius: 5px;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      }
+      .content {
+        padding: 10px 20px;
+        text-align: center;
+        transform: translateY(-500px);
+        opacity: 0;
+        transition: 0.3s;
+      }
+      .card:hover > .content {
+        opacity: 1;
+        transform: translateY(-200px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="imgbox">
+        <img src="./about.jpg" alt="" />
+      </div>
+      <div class="content">
+        <h2>Prasad Sontakke</h2>
+        <p>
+          My name is Prasad, I am looking for a job of a web developer, Graduate
+          In Computer Science from BAATU University. I am always ready for a new
+          experience and to learn new things.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
